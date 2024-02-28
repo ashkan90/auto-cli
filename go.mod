@@ -1,3 +1,3 @@
-module github.com/ashkan90/auto-cli
+module github.com/ashkan90/auto
 
 go 1.21

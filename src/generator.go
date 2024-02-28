@@ -26,7 +26,7 @@ var (
 
 func init() {
 	pkg = flag.String("package", "main", "where this node will be located in local package. Default is 'main'")
-	source = flag.String("core-source", "github.com/ashkan90/...", "")
+	source = flag.String("core-source", "github.com/ashkan90/auto", "")
 	nodeName = flag.String("node-name", "", "whether the name of node")
 	out = flag.String("out", "/", "where to locate generated file")
 

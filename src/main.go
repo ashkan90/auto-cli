@@ -3,32 +3,13 @@ package main
 import (
 	"context"
 	"flag"
+
+	auto_cli "github.com/ashkan90/auto-cli/auto-cli"
+
 	"github.com/cristalhq/acmd"
 
 	"os"
 )
-
-const (
-	FILE_NAME = "node_template"
-)
-
-const (
-	FLAG_PACKAGE   = "{{ package }}"
-	FLAG_SOURCE    = "{{ core-source }}"
-	FLAG_NODE_NAME = "{{ node-name }}"
-)
-
-var (
-	pkg      *string
-	source   *string
-	nodeName *string
-	out      *string
-)
-
-func init() {
-
-	flag.Parse()
-}
 
 type generalFlags struct {
 	IsVerbose bool
@@ -61,7 +42,7 @@ func main() {
 					return err
 				}
 
-				genContent(cfg.Package, cfg.Core, cfg.NodeName)
+				auto_cli.GenContent(cfg.Package, cfg.Core, cfg.Output, cfg.NodeName)
 				return nil
 			},
 		},

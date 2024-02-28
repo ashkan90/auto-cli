@@ -20,9 +20,9 @@ builds:
     env:
       - CGO_ENABLED=0
       - GO111MODULE=on
-      - GOPROXY=proxy.golang.org
+      - GOPROXY=https://proxy.golang.org
       - GOSUMDB=sum.golang.org
-    main: ./
+    main: ./src/
 
 snapshot:
   name_template: "snap-{{ .Commit }}"

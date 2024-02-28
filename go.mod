@@ -1,3 +1,3 @@
-module github.com/ashkan90/bp-cli
+module github.com/ashkan90/auto-cli
 
 go 1.21

@@ -5,10 +5,10 @@
 release:
   github:
     owner: ashkan90
-    name: bp-cli
+    name: auto
 
 builds:
-  - binary: bp-cli
+  - binary: auto
     goos:
       - darwin
       - windows
@@ -22,7 +22,7 @@ builds:
       - GO111MODULE=on
       - GOPROXY=https://proxy.golang.org
       - GOSUMDB=sum.golang.org
-    main: ./cli/
+    main: ./src/
 
 snapshot:
   name_template: "snap-{{ .Commit }}"

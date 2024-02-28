@@ -1,4 +1,4 @@
-package bp_cli
+package main
 
 import (
 	"bytes"

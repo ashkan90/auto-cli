@@ -1,0 +1,35 @@
+# Release automation via GoReleaser (goreleaser.com)
+# Requires a valid GITHUB_TOKEN envar prior to running `goreleaser`
+# See https://goreleaser.com/environment/ for more info
+---
+release:
+  github:
+    owner: ashkan90
+    name: bp-cli
+
+builds:
+  - binary: bp-cli
+    goos:
+      - darwin
+      - windows
+      - linux
+    goarch:
+      - amd64
+      - arm64
+      - 386
+    env:
+      - CGO_ENABLED=0
+      - GO111MODULE=on
+      - GOPROXY=https://proxy.golang.org
+      - GOSUMDB=sum.golang.org
+    main: ./cli/
+
+archives:
+  - format: tar.gz
+    wrap_in_directory: true
+    files:
+      - LICENSE
+      - README.md
+
+snapshot:
+  name_template: "snap-{{ .Commit }}"

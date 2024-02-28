@@ -24,12 +24,5 @@ builds:
       - GOSUMDB=sum.golang.org
     main: ./cli/
 
-archives:
-  - format: tar.gz
-    wrap_in_directory: true
-    files:
-      - LICENSE
-      - README.md
-
 snapshot:
   name_template: "snap-{{ .Commit }}"

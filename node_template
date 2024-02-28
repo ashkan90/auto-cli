@@ -1,0 +1,21 @@
+package {{ package }}
+
+import (
+	"{{ core-source }}"
+)
+
+type {{ node-name }}Node struct {
+	src.NodeInterface
+}
+
+func New{{ node-name }}Node() src.NodeInterface {
+	return &{{ node-name }}Node{
+		NodeInterface: src.NewNode(),
+	}
+}
+
+// Execute no need to write unless it executes something
+func (n *{{ node-name }}Node) Execute(input string, forward func(output string)) {
+	// do something here
+	forward("exec")
+}

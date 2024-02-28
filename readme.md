@@ -1,3 +1,3 @@
 ``
-go install -v github.com/ashkan90/auto@latest
+go install -v github.com/ashkan90/auto-cli@latest
 ``

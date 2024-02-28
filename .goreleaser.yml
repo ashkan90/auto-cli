@@ -5,10 +5,10 @@
 release:
   github:
     owner: ashkan90
-    name: auto
+    name: auto-cli
 
 builds:
-  - binary: auto
+  - binary: auto-cli
     goos:
       - darwin
       - windows
@@ -20,9 +20,9 @@ builds:
     env:
       - CGO_ENABLED=0
       - GO111MODULE=on
-      - GOPROXY=https://proxy.golang.org
+      - GOPROXY=proxy.golang.org
       - GOSUMDB=sum.golang.org
-    main: ./src/
+    main: ./
 
 snapshot:
   name_template: "snap-{{ .Commit }}"
